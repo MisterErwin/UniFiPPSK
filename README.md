@@ -49,6 +49,14 @@ db.wlanconf.update(
 )
 ```
 
+Now you just have to (force-)provision all APs once for this change to the MongoDB/wireless network to take effect.
+
+Make sure to use an updated firmware (should be a v6 firmware) and controller,
+as otherwise you will be greeted by "UID IoT WLAN Your Wireless Network Name is not supported by f4:92:aa:bb:cc:dd and
+will be skipped" errors in your server.log.
+
+
+
 Your radius' users file should look like the following and include the `Tunnel-Password` option.
 
 ```
@@ -59,9 +67,5 @@ aa:bb:cc:dd:ee:ff Cleartext-Password := "aa:bb:cc:dd:ee:ff"
     Tunnel-Password = ILikeTrams
 ```
 
-Now you just have to (force-)provision all APs for this change to take effect.
-
-Make sure to use an updated firmware (should be a v6 firmware) and controller,
-as otherwise you will be greeted by "UID IoT WLAN Your Wireless Network Name is not supported by f4:92:aa:bb:cc:dd and
-will be skipped" errors in your server.log.
+From now on, you only have to modify and update your radius users config for new PSKs to be useable.
 
