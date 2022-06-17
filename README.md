@@ -36,8 +36,7 @@ then enable the option to retrieve the WPA passphrase from RADIUS,
 and finally require the dynamic VLANs (only required for RADIUS assigned VLANs).
 
 ```js
-use
-ace
+use ace
 db.wlanconf.update(
     {name: "Your Wireless Network Name"},
     {
